@@ -1,0 +1,269 @@
+// Variables
+$font-primary: "Playfair Display", serif;
+$background-color: #5d4802;
+$hover-color: #391a0b;
+$bg-color: #e5e5a4;
+$text-color: #333;
+$footer-bg-color: rgba(0, 0, 0, 0.8);
+
+// Estilos Body
+body {
+    font-family: $font-primary;
+
+    // Reset CSS
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Home Background Image
+.home {
+    background-image: url('/img/backgroundimage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+// Estilo de título y opciones de menú
+.portada {
+    display: flex;
+    flex-direction: column; // Disposición Vertical
+    justify-content: center; // Centrado Verticalmente
+    align-items: center; // Centrado Horizontalmente
+    text-align: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3em;
+    color: #000000;
+    text-shadow: 3px 2px 4px rgba(252, 252, 252, 0.6);
+}
+
+.titulo-principal-underlined {
+    text-decoration: underline; // Subrayar easy en el home
+}
+
+// Menu, en el home la opción de elegir Recetas o Tienda.
+.menu {
+    text-decoration: none;
+    background-color: $background-color;
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+// Estilos de Recetas y Tienda
+.titulo {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    background-color: $bg-color;
+}
+
+.container-tienda,
+.container-receta {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+
+.populares {
+    justify-content: space-around;
+    text-align: center;
+
+    .link-dark {
+        color: black;
+    }
+}
+
+// Estilo de imágenes
+img {
+    max-width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.product img {
+    width: 100%; 
+    height: auto; 
+}
+
+// Estilo de receta
+.receta {
+    margin: 2rem;
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        color: black;
+    }
+
+    .ingredientes,
+    .instrucciones {
+        background-color: whitesmoke;
+        padding: 1rem;
+        border: 1px solid black;
+        border-radius: 5px;
+        color: $text-color;
+
+        h2 {
+            border-bottom: 2px solid black;
+            padding-bottom: 0.5rem;
+        }
+
+        ul,
+        ol {
+            margin: 1rem 0;
+        }
+    }
+}
+
+// Footer
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $footer-bg-color;
+    padding: 5px;
+    padding-bottom: 10px; 
+
+    .footer-dos {
+        position: relative;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+
+        a {
+            padding: 5px;
+            background-color: $bg-color;
+            margin: 10px;
+            border-radius: 50%;
+
+            i {
+                font-size: 2em;
+                color: #362a01;
+                opacity: 0.9;
+
+                &:hover {
+                    color: whitesmoke; 
+                    transition: 0.5s; 
+                }
+            }
+
+            &:hover {
+                background-color: $hover-color; 
+                transition: 0.5s; 
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: $footer-bg-color;
+        padding: 0.5px;
+        text-align: center;
+
+        p {
+            color: whitesmoke;
+        }
+    }
+
+    .designer {
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+}
+
+// Media Queries para pantallas más grandes
+
+// Tablet
+@media (min-width: 600px) and (max-width: 899px) {
+    h1 {
+        font-size: 4em; // Aumenta el tamaño de la letra
+    }
+
+    .menu {
+        font-size: 20px; // También aumento para el menú
+    }
+}
+
+// Desktop
+@media (min-width: 900px) {
+    h1 {
+        font-size: 5em;
+    }
+
+    .portada {
+        height: 80vh; // Set de altura ajustado según el tamaño de la pantalla
+    }
+
+    .menu {
+        font-size: 30px; //
+    }
+
+    .social-icons a {
+        padding: 10px; // Aumento padding y margin de los iconoes de social media
+        margin: 15px; 
+    }
+
+    .social-icons a i {
+        font-size: 2.5em; // Aumentar el tamaño de los iconos en pantallas más grandes
+    }
+
+    // Para la tienda, que en desktop quede con dos colummnas y dos filas
+    .container-tienda {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    // Estilo Carrousel
+    .producto-3 {
+        grid-column: span 2; // Que ocupe una fila y dos columnas
+        display: flex;
+        flex-direction: column;
+        align-items: center; // 
+    }
+
+    .receta {
+        display: flex;
+        flex-direction: column; // 
+        margin: 20px; // 
+    }
+
+    // Imágenes de recetas
+    .receta img {
+        max-width: 100%; 
+        height: auto; 
+        margin-right: 20px; 
+    }
+
+    // En pantallas grandes, los ingredientes e instrucciones deben quedar uno al lado del otro
+    .instrucciones-container {
+        display: flex; // 
+        justify-content: space-between; 
+        width: 100%;
+
+        section {
+            flex: 1; 
+        }
+    }
+}

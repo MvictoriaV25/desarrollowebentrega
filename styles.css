@@ -1,0 +1,221 @@
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  background-image: url("/img/backgroundimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3em;
+  color: #000000;
+  text-shadow: 3px 2px 4px rgba(252, 252, 252, 0.6);
+}
+
+.titulo-principal-underlined {
+  text-decoration: underline;
+}
+
+.menu {
+  text-decoration: none;
+  background-color: #5d4802;
+  color: white;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+.menu:hover {
+  background-color: #391a0b;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #e5e5a4;
+}
+
+.container-tienda,
+.container-receta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.populares {
+  justify-content: space-around;
+  text-align: center;
+}
+.populares .link-dark {
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.receta {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.receta h2 {
+  color: black;
+}
+.receta .ingredientes,
+.receta .instrucciones {
+  background-color: whitesmoke;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: #333;
+}
+.receta .ingredientes h2,
+.receta .instrucciones h2 {
+  border-bottom: 2px solid black;
+  padding-bottom: 0.5rem;
+}
+.receta .ingredientes ul,
+.receta .ingredientes ol,
+.receta .instrucciones ul,
+.receta .instrucciones ol {
+  margin: 1rem 0;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  padding-bottom: 10px;
+}
+footer .footer-dos {
+  position: relative;
+}
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+}
+footer .social-icons a {
+  padding: 5px;
+  background-color: #e5e5a4;
+  margin: 10px;
+  border-radius: 50%;
+}
+footer .social-icons a i {
+  font-size: 2em;
+  color: #362a01;
+  opacity: 0.9;
+}
+footer .social-icons a i:hover {
+  color: whitesmoke;
+  transition: 0.5s;
+}
+footer .social-icons a:hover {
+  background-color: #391a0b;
+  transition: 0.5s;
+}
+footer .footer-bottom {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5px;
+  text-align: center;
+}
+footer .footer-bottom p {
+  color: whitesmoke;
+}
+footer .designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  h1 {
+    font-size: 4em;
+  }
+  .menu {
+    font-size: 20px;
+  }
+}
+@media (min-width: 900px) {
+  h1 {
+    font-size: 5em;
+  }
+  .portada {
+    height: 80vh;
+  }
+  .menu {
+    font-size: 30px;
+  }
+  .social-icons a {
+    padding: 10px;
+    margin: 15px;
+  }
+  .social-icons a i {
+    font-size: 2.5em;
+  }
+  .container-tienda {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+  .producto-3 {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .receta {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  .receta img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+  }
+  .instrucciones-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .instrucciones-container section {
+    flex: 1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
