@@ -6,7 +6,7 @@ body {
 }
 
 .home {
-  background-image: url("/img/backgroundimage.jpg");
+  background-image: url("../img/backgroundimage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
